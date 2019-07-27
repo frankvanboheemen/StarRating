@@ -26,6 +26,8 @@ class StarRatingUITests: XCTestCase {
     }
 
     func testSetThreeStarRating() {
+        //Tests if the rating is set to '3' when the third button is click
+        
         XCTAssertTrue(isDisplayingRatingControl)
         guard let control = app?.otherElements["RatingControl"] as? RatingControl else { return }
         
@@ -38,6 +40,8 @@ class StarRatingUITests: XCTestCase {
     }
     
     func testResetRating() {
+        //Tests if the rating is set back to '0' when the third button is click twice
+        
         XCTAssertTrue(isDisplayingRatingControl)
         guard let control = app?.otherElements["RatingControl"] as? RatingControl else { return }
         

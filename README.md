@@ -5,4 +5,3 @@ This control allows the user to give a star rating by clicking one of the stars 
 
 
 I've made this class in service of [Pictureflow](https://pictureflow.app).
----

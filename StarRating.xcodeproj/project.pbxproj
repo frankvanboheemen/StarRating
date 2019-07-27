@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC29E58122EC4AB4002B3393 /* RatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29E58022EC4AB4002B3393 /* RatingButton.swift */; };
+		AC29E58322EC4CD9002B3393 /* NSImage + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29E58222EC4CD9002B3393 /* NSImage + extension.swift */; };
 		AC47CB6222DC763D00D9D0B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CB6122DC763D00D9D0B7 /* AppDelegate.swift */; };
 		AC47CB6422DC763D00D9D0B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CB6322DC763D00D9D0B7 /* ViewController.swift */; };
 		AC47CB6622DC763F00D9D0B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC47CB6522DC763F00D9D0B7 /* Assets.xcassets */; };
 		AC47CB6922DC763F00D9D0B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC47CB6722DC763F00D9D0B7 /* Main.storyboard */; };
 		AC47CB7522DC763F00D9D0B7 /* StarRatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CB7422DC763F00D9D0B7 /* StarRatingTests.swift */; };
 		AC47CB8022DC764000D9D0B7 /* StarRatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CB7F22DC764000D9D0B7 /* StarRatingUITests.swift */; };
+		AC47CB8E22DC767D00D9D0B7 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47CB8D22DC767D00D9D0B7 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC29E58022EC4AB4002B3393 /* RatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingButton.swift; sourceTree = "<group>"; };
+		AC29E58222EC4CD9002B3393 /* NSImage + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage + extension.swift"; sourceTree = "<group>"; };
 		AC47CB5E22DC763D00D9D0B7 /* StarRating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarRating.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC47CB6122DC763D00D9D0B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC47CB6322DC763D00D9D0B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		AC47CB7B22DC763F00D9D0B7 /* StarRatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarRatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC47CB7F22DC764000D9D0B7 /* StarRatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingUITests.swift; sourceTree = "<group>"; };
 		AC47CB8122DC764000D9D0B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC47CB8D22DC767D00D9D0B7 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 			children = (
 				AC47CB6122DC763D00D9D0B7 /* AppDelegate.swift */,
 				AC47CB6322DC763D00D9D0B7 /* ViewController.swift */,
+				AC47CB8D22DC767D00D9D0B7 /* RatingControl.swift */,
+				AC29E58022EC4AB4002B3393 /* RatingButton.swift */,
+				AC29E58222EC4CD9002B3393 /* NSImage + extension.swift */,
 				AC47CB6522DC763F00D9D0B7 /* Assets.xcassets */,
 				AC47CB6722DC763F00D9D0B7 /* Main.storyboard */,
 				AC47CB6A22DC763F00D9D0B7 /* Info.plist */,
@@ -254,7 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC29E58322EC4CD9002B3393 /* NSImage + extension.swift in Sources */,
 				AC47CB6422DC763D00D9D0B7 /* ViewController.swift in Sources */,
+				AC47CB8E22DC767D00D9D0B7 /* RatingControl.swift in Sources */,
+				AC29E58122EC4AB4002B3393 /* RatingButton.swift in Sources */,
 				AC47CB6222DC763D00D9D0B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

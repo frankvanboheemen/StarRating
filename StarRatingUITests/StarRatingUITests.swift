@@ -7,28 +7,62 @@
 //
 
 import XCTest
+@testable import StarRating
 
 class StarRatingUITests: XCTestCase {
-
+    var app : XCUIApplication?
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        app = XCUIApplication()
+        app?.launchArguments.append("--uitesting")
+        
+        app?.launch()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSetThreeStarRating() {
+        XCTAssertTrue(isDisplayingRatingControl)
+        guard let control = app?.otherElements["RatingControl"] as? RatingControl else { return }
+        
+        let identifier = "RatingButton-2"
+        XCTAssert(buttonExists(with: identifier))
+        
+        app?.buttons[identifier].click()
+            XCTAssertTrue(control.rating == 3)
+        
     }
+    
+    func testResetRating() {
+        XCTAssertTrue(isDisplayingRatingControl)
+        guard let control = app?.otherElements["RatingControl"] as? RatingControl else { return }
+        
+        let identifier = "RatingButton-2"
+        XCTAssert(buttonExists(with: identifier))
+        
+        app?.buttons[identifier].click()
+        XCTAssertTrue(control.rating == 3)
+        
+        
+        app?.buttons[identifier].click()
+        XCTAssertTrue(control.rating == 0)
+        
+    }
+    
+}
 
+extension StarRatingUITests {
+    var isDisplayingRatingControl: Bool {
+        guard let exists = app?.otherElements["RatingControl"].exists else { return false }
+        return exists
+    }
+    
+    func buttonExists(with identifier: String) -> Bool {
+        guard let exists = app?.buttons[identifier].exists else { return false }
+        return exists
+    }
 }

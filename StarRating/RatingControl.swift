@@ -46,7 +46,7 @@ protocol RatingControlDelegate {
         }
         ratingButtons.removeAll()
         
-        for _ in 0..<starCount {
+        for i in 0..<starCount {
             let button = RatingButton(title: "", target: self, action: #selector(RatingControl.ratingButtonPressed))
             button.ratingButtonDelegate = self
             
@@ -58,6 +58,7 @@ protocol RatingControlDelegate {
             if let image = NSImage(named: "solid-star") {
                 button.set(image: image)
             }
+            button.setAccessibilityIdentifier("RatingButton-\(i)")
             ratingButtons.append(button)
         }
     }
@@ -119,5 +120,14 @@ protocol RatingControlDelegate {
         for i in (index + 1)..<ratingButtons.count {
             ratingButtons[i].highlight(false)
         }
+    }
+    
+    //Used in UI-tests
+    override func accessibilityIdentifier() -> String {
+        return "RatingControl"
+    }
+    
+    override func isAccessibilityElement() -> Bool {
+        return true
     }
 }
